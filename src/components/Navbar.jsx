@@ -35,7 +35,7 @@ export default function Navbar() {
             <div className='max-w-screen-2xl bg-white container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 '>
                 <div className='flex justify-between items-center h-16'>
                     <div className='flex space-x-2'>
-                        <img src={photo} alt="photo" className='w-12 h-12 rounded-full' />
+                        <img src={photo} alt="image" className='w-12 h-12 rounded-full' />
                         <h1 className='font-bold text-xl cursor-pointer'>
                             <span className='text-regular text-2xl'>N</span>agendra
                             <p className='text-sm'>Web Developer</p>
