@@ -21,7 +21,7 @@ export default function Home() {
                         <span className='text-xl'>Welcome In My Feed
                         </span>
                         <h1 className='text-3xl font-semibold '>Hello, I'm a  <ReactTyped
-                            className='text-red-700 text-3xl'
+                            className='text-regular text-3xl'
                             strings={["Developer", "Programmer", "Coder"]}
                             typeSpeed={40}
                             backSpeed={50}
@@ -53,7 +53,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className='md:w-1/2 md:ml-48 md:mt-20 order-1 mt-8'>
-                        <img src={photo} alt="photo" className='rounded-full md:w-[450px] md:h-[450px]' />
+                        <img src={photo} alt="Profile-img" className='rounded-full md:w-[450px] md:h-[450px]' />
                     </div>
                 </div>
                 <br /><br /> <br /> <br />
