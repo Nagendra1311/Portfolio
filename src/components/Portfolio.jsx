@@ -54,9 +54,7 @@ function PortFolio() {
                         >
                             <img
                                 // src={logo}
-                                className="w-[120px] h-[120px] p-1 rounded-full border-[2px]"
-                              
-                            />
+                                className="w-[120px] h-[120px] p-1 rounded-full border-[2px]" alt="portfolio-img  />
                             <div>
                                 <div className="px-2 font-bold text-xl mb-2">{name}</div>
                                 <p className="px-2 text-gray-700">
