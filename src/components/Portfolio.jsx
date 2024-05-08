@@ -55,7 +55,7 @@ function PortFolio() {
                             <img
                                 // src={logo}
                                 className="w-[120px] h-[120px] p-1 rounded-full border-[2px]"
-                                alt=""
+                              
                             />
                             <div>
                                 <div className="px-2 font-bold text-xl mb-2">{name}</div>
