@@ -29,7 +29,9 @@ export default function Home() {
                         />
                         </h1>
                         <br />
-                        <p className='text-justify'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem doloribus eveniet, numquam rem quidem at voluptate eaque voluptas id tempora libero placeat labore blanditiis itaque perspiciatis non. Culpa, quas consequuntur.</p>
+                        <p className='text-justify'>
+                            As a dedicated and innovative web developer with a strong foundation in HTML, CSS, JavaScript, and modern frameworks like React, I aim to create seamless, user-friendly web applications. I am passionate about leveraging my skills in front-end and back-end development to deliver high-quality, scalable solutions. Seeking opportunities to contribute to dynamic teams and grow professionally in a fast-paced, tech-driven environment
+                        </p>
                         <br />
                         <div className='flex sm:justify-between flex-col sm:flex-row items-center space-y-4 '>
                             <div className='space-y-2'>
