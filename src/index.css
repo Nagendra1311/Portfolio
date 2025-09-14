@@ -1,13 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@500&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
 
 body {
-  font-family: 'Poppins', 'sans-serif';
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
 }
