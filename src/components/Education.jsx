@@ -1,8 +1,7 @@
 import React from "react";
 import { GraduationCap, Award } from "lucide-react"; // icons
 
-const Education = () => {
-  let isDarkMode = false;
+const Education = ({isDarkMode}) => {
 
   return (
     <section

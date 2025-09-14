@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
-const Experience = () => {
-      const [isDarkMode, setIsDarkMode] = useState(false);
+const Experience = ({isDarkMode}) => {
     
     const experience = [
     {

@@ -1,8 +1,7 @@
 import React from "react";
 import { ExternalLink } from "lucide-react"; // make sure you have lucide-react installed
 
-const Projects = () => {
-  let isDarkMode = false;
+const Projects = ({isDarkMode}) => {
 
   const projects = [
     {

@@ -9,8 +9,7 @@ import {
   SiPostman, SiStripe, SiRazorpay 
 } from "react-icons/si";
 
-const Skills = () => {
-  let isDarkMode = false;
+const Skills = ({isDarkMode}) => {
 
   const skills = {
     "Languages & Frameworks": [

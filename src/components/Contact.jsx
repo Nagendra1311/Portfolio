@@ -1,8 +1,7 @@
 import React from "react";
 import { Mail, Linkedin, Phone, Github, ExternalLink } from "lucide-react";
 
-const Contact = ({  }) => {
-  let isDarkMode=false;
+const Contact = ({ isDarkMode }) => {
   return (
     <section
       id="contact"
