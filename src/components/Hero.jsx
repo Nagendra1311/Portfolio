@@ -1,13 +1,13 @@
 import React from "react";
-import { Mail, ExternalLink, Github, Linkedin, ChevronDown, Download } from "lucide-react";
+import { Mail, Phone, ExternalLink, Github, Linkedin, ChevronDown, Download } from "lucide-react";
 
 const Hero = ({ isDarkMode }) => {
   return (
     <section
       id="home"
       className={`min-h-screen flex items-center justify-center pt-20 transition-colors duration-300 ${isDarkMode
-          ? "bg-gradient-to-br from-gray-900 to-gray-800"
-          : "bg-gradient-to-br from-blue-50 to-purple-50"
+        ? "bg-gradient-to-br from-gray-900 to-gray-800"
+        : "bg-gradient-to-br from-blue-50 to-purple-50"
         }`}
     >
       <div className="max-w-6xl mx-auto px-4 text-center">
@@ -18,8 +18,8 @@ const Hero = ({ isDarkMode }) => {
               <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 p-1 shadow-2xl">
                 <div
                   className={`w-full h-full rounded-full flex items-center justify-center text-6xl md:text-7xl font-bold transition-colors ${isDarkMode
-                      ? "bg-gray-800 text-white"
-                      : "bg-white text-gray-800"
+                    ? "bg-gray-800 text-white"
+                    : "bg-white text-gray-800"
                     }`}
                 >
                   NG
@@ -59,7 +59,7 @@ const Hero = ({ isDarkMode }) => {
               Get In Touch
             </a>
             <a
-              href="../Nagendra Gupta.pdf"
+              href="/Nagendra Gupta.pdf"
               download
               className="flex items-center gap-2 border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full hover:bg-blue-600 hover:text-white transition-colors"
             >
@@ -70,13 +70,34 @@ const Hero = ({ isDarkMode }) => {
 
           {/* Social Links */}
           <div className="flex justify-center gap-6">
+            {/* Phone Button */}
+            <a
+              href="tel:+919628960163"
+              className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors ${isDarkMode
+                ? "bg-gray-700 text-yellow-400 hover:bg-gray-600"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
+            >
+              <Phone className="w-5 h-5" />
+            </a>
+
+            {/* Email Button */}
+            <a
+              href="mailto:nagendragupta3248@gmail.com"
+              className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors ${isDarkMode
+                ? "bg-gray-700 text-yellow-400 hover:bg-gray-600"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
+            >
+              <Mail className="w-5 h-5" />
+            </a>
             <a
               href="https://github.com/Nagendra1311"
               target="_blank"
               rel="noopener noreferrer"
-              className={`transition-colors ${isDarkMode
-                  ? "text-gray-400 hover:text-blue-400"
-                  : "text-gray-600 hover:text-blue-600"
+              className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors  ${isDarkMode
+                  ? "bg-gray-700 text-yellow-400 hover:bg-gray-600"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
             >
               <Github size={24} />
@@ -85,9 +106,9 @@ const Hero = ({ isDarkMode }) => {
               href="https://www.linkedin.com/in/nagendra-gupta-617321309/"
               target="_blank"
               rel="noopener noreferrer"
-              className={`transition-colors ${isDarkMode
-                  ? "text-gray-400 hover:text-blue-400"
-                  : "text-gray-600 hover:text-blue-600"
+              className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors  ${isDarkMode
+                 ? "bg-gray-700 text-yellow-400 hover:bg-gray-600"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
             >
               <Linkedin size={24} />
