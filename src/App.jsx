@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -11,23 +11,30 @@ import Education from './components/Education'
 
 function App() {
 
-  const [isDarkMode, setIsDarkMode] = useState(false) // new state for theme
+  const [isDarkMode, setIsDarkMode] = useState(false) 
 
   const themeToggle = (data) => {
     setIsDarkMode(data)
+    localStorage.setItem('darkMode', data)
+
   }
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('darkMode') === 'true'
+    setIsDarkMode(savedTheme)
+  }, [])
 
   return (
     <div className="App">
-      <Header themeToggle={themeToggle} />
+      <Header themeToggle={themeToggle} isDarkMode={isDarkMode} />
       <main>
-        <Hero isDarkMode={isDarkMode}/>
-        <About isDarkMode={isDarkMode}/>
-        <Experience isDarkMode={isDarkMode}/>
-        <Skills isDarkMode={isDarkMode}/>
-        <Projects isDarkMode={isDarkMode}/>
-        <Education isDarkMode={isDarkMode}/>
-        <Contact isDarkMode={isDarkMode}/>
+        <Hero isDarkMode={isDarkMode} />
+        <About isDarkMode={isDarkMode} />
+        <Experience isDarkMode={isDarkMode} />
+        <Skills isDarkMode={isDarkMode} />
+        <Projects isDarkMode={isDarkMode} />
+        <Education isDarkMode={isDarkMode} />
+        <Contact isDarkMode={isDarkMode} />
       </main>
       {/* <Footer /> */}
     </div>
