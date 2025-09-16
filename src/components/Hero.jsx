@@ -72,7 +72,7 @@ const Hero = ({ isDarkMode }) => {
             Get In Touch
           </a>
           <a
-            href="/Nagendra Gupta.pdf"
+            href="https://nagendra1311.netlify.app/NagendraGupta.pdf"
             download
             className="flex items-center gap-2 border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full hover:bg-blue-600 hover:text-white transition-colors"
           >
