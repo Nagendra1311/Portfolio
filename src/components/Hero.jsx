@@ -85,31 +85,35 @@ const Hero = ({ isDarkMode }) => {
         <motion.div variants={item} className="flex justify-center gap-6">
           <a
             href="tel:+919628960163"
-            className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors ${isDarkMode ? "bg-gray-700 text-yellow-400 hover:bg-gray-600" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
+            aria-label="Call +91 9628960163"
+            className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ${isDarkMode ? "bg-gray-700 text-yellow-400 hover:bg-gray-600 focus:ring-yellow-300" : "bg-gray-100 text-gray-700 hover:bg-gray-200 focus:ring-blue-300"}`}
           >
-            <Phone className="w-5 h-5" />
+            <Phone className="w-5 h-5" aria-hidden="true" />
           </a>
           <a
             href="mailto:nagendragupta3248@gmail.com"
-            className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors ${isDarkMode ? "bg-gray-700 text-yellow-400 hover:bg-gray-600" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
+            aria-label="Email nagendragupta3248@gmail.com"
+            className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ${isDarkMode ? "bg-gray-700 text-yellow-400 hover:bg-gray-600 focus:ring-yellow-300" : "bg-gray-100 text-gray-700 hover:bg-gray-200 focus:ring-blue-300"}`}
           >
-            <Mail className="w-5 h-5" />
+            <Mail className="w-5 h-5" aria-hidden="true" />
           </a>
           <a
             href="https://github.com/Nagendra1311"
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors  ${isDarkMode ? "bg-gray-700 text-yellow-400 hover:bg-gray-600" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
+            aria-label="Open GitHub profile"
+            className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ${isDarkMode ? "bg-gray-700 text-yellow-400 hover:bg-gray-600 focus:ring-yellow-300" : "bg-gray-100 text-gray-700 hover:bg-gray-200 focus:ring-blue-300"}`}
           >
-            <Github size={24} />
+            <Github size={24} aria-hidden="true" />
           </a>
           <a
             href="https://www.linkedin.com/in/nagendra-gupta-617321309/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors  ${isDarkMode ? "bg-gray-700 text-yellow-400 hover:bg-gray-600" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
+            aria-label="Open LinkedIn profile"
+            className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ${isDarkMode ? "bg-gray-700 text-yellow-400 hover:bg-gray-600 focus:ring-yellow-300" : "bg-gray-100 text-gray-700 hover:bg-gray-200 focus:ring-blue-300"}`}
           >
-            <Linkedin size={24} />
+            <Linkedin size={24} aria-hidden="true" />
           </a>
         </motion.div>
 

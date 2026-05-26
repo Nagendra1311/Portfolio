@@ -6,7 +6,7 @@ import {
   SiMongodb, SiExpress, SiPython, SiTypescript, SiJavascript, 
   SiHtml5, SiCss3, SiRedux, SiGraphql, SiTailwindcss, SiBootstrap, 
   SiMysql, SiFirebase, SiPrisma, SiSequelize, SiRedis, SiSocketdotio, 
-  SiPostman, SiStripe, SiRazorpay 
+  SiPostman, SiStripe, SiRazorpay, SiNextdotjs
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -19,6 +19,7 @@ const Skills = ({ isDarkMode }) => {
       { name: "Node.js", icon: <FaNodeJs /> },
       { name: "Express.js", icon: <SiExpress /> },
       { name: "React.js", icon: <FaReact /> },
+    { name: "Next.js", icon: <SiNextdotjs /> },
       { name: "Redux", icon: <SiRedux /> },
       { name: "GraphQL", icon: <SiGraphql /> },
       { name: "HTML5", icon: <SiHtml5 /> },
@@ -117,8 +118,9 @@ const Skills = ({ isDarkMode }) => {
                       : "bg-gradient-to-r from-blue-50 to-purple-50 text-gray-700 border-blue-100 hover:border-blue-300"
                     }`}
                     variants={item}
+                    role="listitem"
                   >
-                    <span className="text-lg">{skill.icon}</span>
+                    <span className="text-lg" aria-hidden="true">{skill.icon}</span>
                     <span className="font-medium">{skill.name}</span>
                   </motion.span>
                 ))}

@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ExternalLink,Github, } from "lucide-react";
+import { ExternalLink, Github, } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Projects = ({ isDarkMode }) => {
@@ -19,6 +19,7 @@ const Projects = ({ isDarkMode }) => {
       ],
       tech: ["Node.js", "Express.js", "MongoDB", "Firebase", "Socket.IO", "Cashfree"],
       link: "https://batuk.gold",
+      thumbnail: "/assets/projects/batuk.png",
     },
     {
       title: "Partner.batuk.gold Platform",
@@ -42,6 +43,7 @@ const Projects = ({ isDarkMode }) => {
         "Payment APIs",
       ],
       link: "https://partner.batuk.gold",
+      thumbnail: "/assets/projects/partner.png",
     },
     {
       title: "DreamDor.com Platform",
@@ -56,8 +58,19 @@ const Projects = ({ isDarkMode }) => {
       ],
       tech: ["React.js", "Node.js", "Express.js", "MySQL", "Stripe"],
       link: "https://dreamdor.com",
+      thumbnail: "/assets/projects/dreamdor.png",
     },
-     {
+    {
+      title: "Mechmiles.com Platform",
+      status: "Live",
+      description:
+        "An e-commerce platform for tyres and automotive services with a customer storefront, service booking, mobile apps, POS, and an Admin dashboard to manage products, orders, service locations, and franchises.",
+      features: ["Search tyres by vehicle/size/brand", "Cart, checkout & online payments", "Schedule tyre service appointments", "Admin: inventory, orders, service points & franchises", "Mobile apps and POS support"],
+      tech: ["React.js", "Python", "Flask", "PostgreSQL", "Razorpay"],
+      link: "https://mechmiles.com",
+      thumbnail: "/assets/projects/mechmiles.png",
+    },
+    {
       title: "Government Services Platform",
       status: "Completed",
       description:
@@ -69,7 +82,8 @@ const Projects = ({ isDarkMode }) => {
       ],
       tech: ["React.js", "Bootstrap", "Node.js", "Express.js", "MongoDB Atlas"],
       link: "https://github.com/Nagendra1311/Government-Services",
-      flag:'git'
+      thumbnail: "/assets/projects/government.png",
+      flag: 'git'
 
     },
     {
@@ -85,7 +99,8 @@ const Projects = ({ isDarkMode }) => {
       ],
       tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
       link: "https://github.com/Nagendra1311/E-commerce",
-      flag:'git'
+      thumbnail: "/assets/projects/ecommerce.png",
+      flag: 'git'
     },
     {
       title: "Netflix Clone",
@@ -99,7 +114,8 @@ const Projects = ({ isDarkMode }) => {
       ],
       tech: ["React.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS"],
       link: "https://github.com/Nagendra1311/Netflix-Clone",
-      flag:'git'
+      thumbnail: "/assets/projects/netflix.png",
+      flag: 'git'
 
     },
   ];
@@ -112,9 +128,8 @@ const Projects = ({ isDarkMode }) => {
   return (
     <section
       id="projects"
-      className={`py-20 transition-colors duration-300 ${
-        isDarkMode ? "bg-gray-800" : "bg-white"
-      }`}
+      className={`py-20 transition-colors duration-300 ${isDarkMode ? "bg-gray-800" : "bg-white"
+        }`}
     >
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -123,13 +138,12 @@ const Projects = ({ isDarkMode }) => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              className={`p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ${
-                isDarkMode
+            <motion.article
+              key={project.title}
+              className={`p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ${isDarkMode
                   ? "bg-gradient-to-br from-gray-700 to-gray-600"
                   : "bg-gradient-to-br from-gray-50 to-blue-50"
-              }`}
+                }`}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -139,36 +153,45 @@ const Projects = ({ isDarkMode }) => {
               {/* Title + Status */}
               <div className="flex justify-between items-start mb-4">
                 <h3
-                  className={`text-xl font-bold ${
-                    isDarkMode ? "text-white" : "text-gray-800"
-                  }`}
+                  className={`text-xl font-bold ${isDarkMode ? "text-white" : "text-gray-800"
+                    }`}
                 >
                   {project.title}
                 </h3>
                 <span
-                  className={`text-xs px-2 py-1 rounded-full ${
-                    project.status === "Live"
+                  className={`text-xs px-2 py-1 rounded-full ${project.status === "Live"
                       ? isDarkMode
                         ? "bg-green-900 text-green-200"
                         : "bg-green-100 text-green-800"
                       : project.status === "In Progress"
-                      ? isDarkMode
-                        ? "bg-yellow-900 text-yellow-200"
-                        : "bg-yellow-100 text-yellow-800"
-                      : isDarkMode
-                      ? "bg-gray-600 text-gray-300"
-                      : "bg-gray-200 text-gray-700"
-                  }`}
+                        ? isDarkMode
+                          ? "bg-yellow-900 text-yellow-200"
+                          : "bg-yellow-100 text-yellow-800"
+                        : isDarkMode
+                          ? "bg-gray-600 text-gray-300"
+                          : "bg-gray-200 text-gray-700"
+                    }`}
                 >
                   {project.status}
                 </span>
               </div>
 
+              {/* Optional thumbnail / decorative placeholder */}
+              {project.thumbnail ? (
+                <div className="mb-4">
+                  <img
+                    src={project.thumbnail}
+                    alt={`${project.title} screenshot`}
+                    loading="lazy"
+                    className="w-full h-40 object-cover rounded-sm mb-4"
+                  />
+                </div>
+              ) : null}
+
               {/* Description */}
               <p
-                className={`mb-4 text-sm leading-relaxed ${
-                  isDarkMode ? "text-gray-300" : "text-gray-600"
-                }`}
+                className={`mb-4 text-sm leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
               >
                 {project.description}
               </p>
@@ -176,9 +199,8 @@ const Projects = ({ isDarkMode }) => {
               {/* Key Features */}
               <div className="mb-4">
                 <h4
-                  className={`font-semibold mb-2 ${
-                    isDarkMode ? "text-white" : "text-gray-800"
-                  }`}
+                  className={`font-semibold mb-2 ${isDarkMode ? "text-white" : "text-gray-800"
+                    }`}
                 >
                   Key Features:
                 </h4>
@@ -186,9 +208,8 @@ const Projects = ({ isDarkMode }) => {
                   {project.features.map((feature, i) => (
                     <li
                       key={i}
-                      className={`text-sm flex items-start gap-2 ${
-                        isDarkMode ? "text-gray-300" : "text-gray-600"
-                      }`}
+                      className={`text-sm flex items-start gap-2 ${isDarkMode ? "text-gray-300" : "text-gray-600"
+                        }`}
                     >
                       <div className="w-1 h-1 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                       {feature}
@@ -199,51 +220,51 @@ const Projects = ({ isDarkMode }) => {
 
               {/* Tech Stack */}
               <div className="mb-4">
-                <div className="flex flex-wrap gap-2">
+                <ul className="flex flex-wrap gap-2 list-none p-0 m-0" aria-label={`${project.title} technologies`}> 
                   {project.tech.slice(0, 3).map((tech, i) => (
-                    <span
-                      key={i}
-                      className={`text-xs px-2 py-1 rounded ${
-                        isDarkMode
+                    <li key={i}>
+                      <span
+                        className={`text-xs px-2 py-1 rounded ${isDarkMode
                           ? "bg-blue-900 text-blue-200"
                           : "bg-blue-100 text-blue-800"
-                      }`}
-                    >
-                      {tech}
-                    </span>
+                        }`}
+                      >
+                        {tech}
+                      </span>
+                    </li>
                   ))}
                   {project.tech.length > 3 && (
-                    <span
-                      className={`text-xs px-2 py-1 rounded ${
-                        isDarkMode
+                    <li>
+                      <span
+                        className={`text-xs px-2 py-1 rounded ${isDarkMode
                           ? "bg-gray-600 text-gray-300"
                           : "bg-gray-100 text-gray-600"
-                      }`}
-                    >
-                      +{project.tech.length - 3} more
-                    </span>
+                        }`}
+                      >
+                        +{project.tech.length - 3} more
+                      </span>
+                    </li>
                   )}
-                </div>
+                </ul>
               </div>
 
               {/* Link */}
-              {project.link !== "#"  && (
+              {project.link && (
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-2 font-semibold transition-colors ${
-                    isDarkMode
-                      ? "text-blue-400 hover:text-blue-300"
-                      : "text-blue-600 hover:text-blue-800"
-                  }`}
+                  aria-label={`Open ${project.title} ${project.flag === "git" ? "GitHub repository" : "live project"}`}
+                  className={`inline-flex items-center gap-2 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ${isDarkMode
+                      ? "text-blue-400 hover:text-blue-300 focus:ring-blue-300"
+                      : "text-blue-600 hover:text-blue-800 focus:ring-blue-300"
+                    }`}
                 >
-                  
-                 {project?.flag?<Github size={16}/>:<ExternalLink size={16} />} 
-                 {project?.flag?"Veiw Github":"View Live Project"} 
+                  {project?.flag ? <Github size={16} /> : <ExternalLink size={16} />}
+                  {project?.flag ? "View on GitHub" : "View Project"}
                 </a>
               )}
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>
