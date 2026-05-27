@@ -27,58 +27,66 @@ const Hero = ({ isDarkMode }) => {
       }`}
     >
       <motion.div 
-        className="max-w-6xl mx-auto px-4 text-center"
+        className="max-w-6xl px-4 mx-auto text-center"
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
       >
         {/* Profile Photo */}
-        <motion.div variants={item} className="mb-8 flex justify-center">
+        <motion.div variants={item} className="flex justify-center mb-8">
           <div className="relative">
-            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 p-1 shadow-2xl">
+            <div className="w-40 h-40 p-1 rounded-full shadow-2xl md:w-48 md:h-48 bg-gradient-to-br from-blue-600 to-purple-600">
               <div className={`w-full h-full rounded-full flex items-center justify-center text-6xl md:text-7xl font-bold transition-colors ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-800"}`}>
                 NG
               </div>
             </div>
             {/* Status Badge */}
-            <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-green-500 rounded-full border-4 border-white dark:border-gray-800 flex items-center justify-center">
+            <div className="absolute flex items-center justify-center w-12 h-12 bg-green-500 border-4 border-white rounded-full -bottom-2 -right-2 dark:border-gray-800">
               <div className="w-4 h-4 bg-white rounded-full animate-pulse"></div>
             </div>
           </div>
         </motion.div>
 
         {/* Heading */}
-        <motion.h1 variants={item} className="text-5xl md:text-7xl font-bold mb-6">
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <motion.h1 variants={item} className="mb-6 text-5xl font-bold md:text-7xl">
+          <span className="text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
             Nagendra Gupta
           </span>
         </motion.h1>
 
-        {/* Subtext */}
-        <motion.p variants={item} className={`text-xl md:text-2xl mb-8 max-w-3xl mx-auto ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-          Full Stack Developer with 2+ years of experience building scalable web
-          applications, integrating secure payment systems, and delivering
-          real-time solutions.
+        {/* Subtext - Value Proposition */}
+        <motion.p variants={item} className={`text-lg md:text-xl mb-4 max-w-3xl mx-auto ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+          Full Stack Developer | MERN Specialist | Backend & System Architecture Expert
+        </motion.p>
+        
+        {/* Impact Metric */}
+        <motion.p variants={item} className={`text-base md:text-lg mb-8 max-w-3xl mx-auto ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>
+          Building secure, scalable platforms. <strong>6 live products</strong> | <strong>2+ years experience</strong> | <strong>Real-time systems & Payment integration</strong>
         </motion.p>
 
         {/* Buttons */}
         <motion.div variants={item} className="flex flex-wrap justify-center gap-4 mb-8">
           <a
-            href="mailto:nagendragupta3248@gmail.com"
-            className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors"
+            href="#projects"
+            className="flex items-center gap-2 px-8 py-3 font-semibold text-white transition-all rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg hover:shadow-blue-500/50"
           >
-            <Mail size={20} />
-            Get In Touch
+            View My Projects
           </a>
           <a
             href="https://nagendra1311.netlify.app/Nagendra_Gupta.pdf"
-            // href="https://nagendra1311.netlify.app/NagendraGupta.pdf"
             download
-            className="flex items-center gap-2 border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full hover:bg-blue-600 hover:text-white transition-colors"
+            className="flex items-center gap-2 px-8 py-3 font-semibold text-blue-600 transition-colors border-2 border-blue-600 rounded-full hover:bg-blue-600 hover:text-white"
           >
             <Download size={20} />
             Download Resume
+          </a>
+          <a
+            href="mailto:nagendragupta3248@gmail.com"
+            className={`flex items-center gap-2 px-8 py-3 rounded-full transition-colors font-semibold ${isDarkMode ? "bg-gray-700 text-white hover:bg-gray-600" : "bg-gray-200 text-gray-800 hover:bg-gray-300"}`}
+          >
+            <Mail size={20} />
+            Get In Touch
           </a>
         </motion.div>
 
@@ -119,8 +127,8 @@ const Hero = ({ isDarkMode }) => {
         </motion.div>
 
         {/* Scroll Indicator */}
-        <motion.div variants={item} className="animate-bounce mt-8">
-          <ChevronDown size={32} className="text-blue-600 mx-auto" />
+        <motion.div variants={item} className="mt-8 animate-bounce">
+          <ChevronDown size={32} className="mx-auto text-blue-600" />
         </motion.div>
       </motion.div>
     </section>
@@ -144,12 +152,12 @@ export default Hero;
 //         : "bg-gradient-to-br from-blue-50 to-purple-50"
 //         }`}
 //     >
-//       <div className="max-w-6xl mx-auto px-4 text-center">
+//       <div className="max-w-6xl px-4 mx-auto text-center">
 //         <div className="mb-8">
 //           {/* Profile Photo */}
-//           <div className="mb-8 flex justify-center">
+//           <div className="flex justify-center mb-8">
 //             <div className="relative">
-//               <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 p-1 shadow-2xl">
+//               <div className="w-40 h-40 p-1 rounded-full shadow-2xl md:w-48 md:h-48 bg-gradient-to-br from-blue-600 to-purple-600">
 //                 <div
 //                   className={`w-full h-full rounded-full flex items-center justify-center text-6xl md:text-7xl font-bold transition-colors ${isDarkMode
 //                     ? "bg-gray-800 text-white"
@@ -160,15 +168,15 @@ export default Hero;
 //                 </div>
 //               </div>
 //               {/* Status Badge */}
-//               <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-green-500 rounded-full border-4 border-white dark:border-gray-800 flex items-center justify-center">
+//               <div className="absolute flex items-center justify-center w-12 h-12 bg-green-500 border-4 border-white rounded-full -bottom-2 -right-2 dark:border-gray-800">
 //                 <div className="w-4 h-4 bg-white rounded-full animate-pulse"></div>
 //               </div>
 //             </div>
 //           </div>
 
 //           {/* Heading */}
-//           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-//             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+//           <h1 className="mb-6 text-5xl font-bold md:text-7xl">
+//             <span className="text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
 //               Nagendra Gupta
 //             </span>
 //           </h1>
@@ -187,7 +195,7 @@ export default Hero;
 //           <div className="flex flex-wrap justify-center gap-4 mb-8">
 //             <a
 //               href="mailto:nagendragupta3248@gmail.com"
-//               className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors"
+//               className="flex items-center gap-2 px-6 py-3 text-white transition-colors bg-blue-600 rounded-full hover:bg-blue-700"
 //             >
 //               <Mail size={20} />
 //               Get In Touch
@@ -195,7 +203,7 @@ export default Hero;
 //             <a
 //               href="/Nagendra Gupta.pdf"
 //               download
-//               className="flex items-center gap-2 border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full hover:bg-blue-600 hover:text-white transition-colors"
+//               className="flex items-center gap-2 px-6 py-3 text-blue-600 transition-colors border-2 border-blue-600 rounded-full hover:bg-blue-600 hover:text-white"
 //             >
 //               <Download size={20} />
 //               Download Resume
@@ -252,7 +260,7 @@ export default Hero;
 
 //         {/* Scroll Indicator */}
 //         <div className="animate-bounce">
-//           <ChevronDown size={32} className="text-blue-600 mx-auto" />
+//           <ChevronDown size={32} className="mx-auto text-blue-600" />
 //         </div>
 //       </div>
 //     </section>

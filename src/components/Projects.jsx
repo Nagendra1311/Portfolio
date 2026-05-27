@@ -6,10 +6,23 @@ import { motion } from "framer-motion";
 const Projects = ({ isDarkMode }) => {
   const projects = [
     {
+      title: "Mechmiles.com Platform",
+      status: "Live",
+      description:
+        "E-commerce platform for tyres & automotive services with storefront, service booking, mobile apps, POS, and Admin dashboard.",
+      impact: "Serving 5000+ customers across 10+ service locations",
+      features: ["Search tyres by vehicle/size/brand", "Cart, checkout & online payments", "Schedule tyre service appointments", "Admin: inventory, orders, service locations & franchises", "Mobile apps and POS support"],
+      tech: ["React.js", "Python", "Flask", "PostgreSQL", "Razorpay"],
+      link: "https://mechmiles.com",
+      thumbnail: "/assets/projects/mechmiles.png",
+      isPriority: true,
+    },
+    {
       title: "Batuk.gold Platform",
       status: "Live",
       description:
-        "A gold and silver investment platform supporting buy/sell, SIP, coin redemption, and jewelry purchases.",
+        "Gold and silver investment platform supporting buy/sell, SIP, coin redemption, and jewelry purchases.",
+      impact: "Processing high-value transactions with secure payment integration",
       features: [
         "Implemented purchases, recurring payments (SIP), and coin/jewelry redemption",
         "Integrated third-party APIs for live metal prices & catalogs",
@@ -22,10 +35,28 @@ const Projects = ({ isDarkMode }) => {
       thumbnail: "/assets/projects/batuk.png",
     },
     {
+      title: "Bajaj Capital Platform",
+      status: "Live",
+      description:
+        "White-label gold and silver investment platform for Bajaj Capital as a Batuk partner, featuring buy/sell, SIP, coin redemption, and jewelry purchases with Bajaj branding.",
+      impact: "Enterprise partnership platform processing high-value transactions with secure payment integration",
+      features: [
+        "White-label implementation of Batuk's investment platform for Bajaj Capital",
+        "Purchases, recurring payments (SIP), and coin/jewelry redemption",
+        "Live metal prices & catalogs via third-party API integration",
+        "Cashfree Webhooks for secure payments and transaction handling",
+        "Enterprise-grade logging, error handling, and audit trails",
+      ],
+      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Cashfree", "Firebase"],
+      link: "https://digigoldsilver.bajajcapital.com/",
+      thumbnail: "/assets/projects/bajajcapital.png",
+    },
+    {
       title: "Partner.batuk.gold Platform",
       status: "Live",
       description:
-        "Multi-role platform with a 4-level hierarchy (Partner → Employee → MFD → Investor) for investment and commission management.",
+        "Multi-role platform with 4-level hierarchy for investment and commission management.",
+      impact: "Managing partner commissions and automated payouts",
       features: [
         "Role-based dashboards with commission distribution",
         "Direct in-app payments & email-based EJS proposal links",
@@ -35,7 +66,6 @@ const Projects = ({ isDarkMode }) => {
       ],
       tech: [
         "React.js",
-        "Axios",
         "Node.js",
         "Express.js",
         "MongoDB",
@@ -49,7 +79,8 @@ const Projects = ({ isDarkMode }) => {
       title: "DreamDor.com Platform",
       status: "Live",
       description:
-        "A counseling session booking platform with dashboards for Admin, Counselor, and Student users.",
+        "Counseling session booking platform with dashboards for Admin, Counselor, and Student users.",
+      impact: "Facilitating 100+ counseling sessions with Stripe integration",
       features: [
         "Role-Based Access Control (RBAC) dashboards",
         "Stripe payment gateway integration",
@@ -61,20 +92,11 @@ const Projects = ({ isDarkMode }) => {
       thumbnail: "/assets/projects/dreamdor.png",
     },
     {
-      title: "Mechmiles.com Platform",
-      status: "Live",
-      description:
-        "An e-commerce platform for tyres and automotive services with a customer storefront, service booking, mobile apps, POS, and an Admin dashboard to manage products, orders, service locations, and franchises.",
-      features: ["Search tyres by vehicle/size/brand", "Cart, checkout & online payments", "Schedule tyre service appointments", "Admin: inventory, orders, service points & franchises", "Mobile apps and POS support"],
-      tech: ["React.js", "Python", "Flask", "PostgreSQL", "Razorpay"],
-      link: "https://mechmiles.com",
-      thumbnail: "/assets/projects/mechmiles.png",
-    },
-    {
       title: "Government Services Platform",
       status: "Completed",
       description:
-        "A platform for citizens to access government services, with SMS alerts for new activities in their region.",
+        "Platform for citizens to access government services with SMS alerts for new regional activities.",
+      impact: "SMS notification system for regional updates",
       features: [
         "District Collector can add officers & services",
         "Officers add citizens’ mobile numbers for SMS alerts",
@@ -90,11 +112,12 @@ const Projects = ({ isDarkMode }) => {
       title: "E-commerce Website",
       status: "Completed",
       description:
-        "A full-stack e-commerce app with product catalog, cart, orders, and category filtering.",
+        "Full-stack e-commerce application with product catalog, cart, and order management.",
+      impact: "Complete MERN stack implementation with 50+ products",
       features: [
-        "Interactive React frontend",
-        "Node.js & Express backend for APIs",
-        "MongoDB for product & user data",
+        "Interactive React frontend with responsive design",
+        "Node.js & Express backend APIs",
+        "MongoDB for product & user data storage",
         "Shopping cart, product catalog, category filters",
       ],
       tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
@@ -106,11 +129,12 @@ const Projects = ({ isDarkMode }) => {
       title: "Netflix Clone",
       status: "Completed",
       description:
-        "A clone of Netflix allowing user registration, login, and access to movies fetched via TMDB API.",
+        "Netflix clone with user authentication and movie catalog from TMDB API.",
+      impact: "Full authentication & movie streaming from TMDB API",
       features: [
         "User authentication (register/login)",
         "Movie catalog fetched from TMDB API",
-        "Responsive design with Tailwind",
+        "Responsive design with Tailwind CSS",
       ],
       tech: ["React.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS"],
       link: "https://github.com/Nagendra1311/Netflix-Clone",
@@ -131,12 +155,12 @@ const Projects = ({ isDarkMode }) => {
       className={`py-20 transition-colors duration-300 ${isDarkMode ? "bg-gray-800" : "bg-white"
         }`}
     >
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      <div className="max-w-6xl px-4 mx-auto">
+        <h2 className="mb-16 text-4xl font-bold text-center text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
           Featured Projects
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
@@ -151,7 +175,7 @@ const Projects = ({ isDarkMode }) => {
               variants={cardVariants}
             >
               {/* Title + Status */}
-              <div className="flex justify-between items-start mb-4">
+              <div className="flex items-start justify-between mb-4">
                 <h3
                   className={`text-xl font-bold ${isDarkMode ? "text-white" : "text-gray-800"
                     }`}
@@ -183,7 +207,7 @@ const Projects = ({ isDarkMode }) => {
                     src={project.thumbnail}
                     alt={`${project.title} screenshot`}
                     loading="lazy"
-                    className="w-full h-40 object-cover rounded-sm mb-4"
+                    className="object-cover w-full h-40 mb-4 rounded-sm"
                   />
                 </div>
               ) : null}
@@ -195,6 +219,16 @@ const Projects = ({ isDarkMode }) => {
               >
                 {project.description}
               </p>
+
+              {/* Impact Metric */}
+              {project.impact && (
+                <p
+                  className={`mb-4 text-sm font-semibold italic ${isDarkMode ? "text-blue-300" : "text-blue-600"
+                    }`}
+                >
+                  💡 {project.impact}
+                </p>
+              )}
 
               {/* Key Features */}
               <div className="mb-4">
@@ -211,7 +245,7 @@ const Projects = ({ isDarkMode }) => {
                       className={`text-sm flex items-start gap-2 ${isDarkMode ? "text-gray-300" : "text-gray-600"
                         }`}
                     >
-                      <div className="w-1 h-1 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="flex-shrink-0 w-1 h-1 mt-2 bg-blue-600 rounded-full"></div>
                       {feature}
                     </li>
                   ))}
@@ -220,7 +254,7 @@ const Projects = ({ isDarkMode }) => {
 
               {/* Tech Stack */}
               <div className="mb-4">
-                <ul className="flex flex-wrap gap-2 list-none p-0 m-0" aria-label={`${project.title} technologies`}> 
+                <ul className="flex flex-wrap gap-2 p-0 m-0 list-none" aria-label={`${project.title} technologies`}> 
                   {project.tech.slice(0, 3).map((tech, i) => (
                     <li key={i}>
                       <span
@@ -248,22 +282,28 @@ const Projects = ({ isDarkMode }) => {
                 </ul>
               </div>
 
-              {/* Link */}
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Open ${project.title} ${project.flag === "git" ? "GitHub repository" : "live project"}`}
-                  className={`inline-flex items-center gap-2 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ${isDarkMode
-                      ? "text-blue-400 hover:text-blue-300 focus:ring-blue-300"
-                      : "text-blue-600 hover:text-blue-800 focus:ring-blue-300"
+              {/* Links */}
+              <div className="flex gap-3 mt-6">
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open ${project.title} ${project.flag === "git" ? "GitHub repository" : "live project"}`}
+                    className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 ${project?.flag
+                      ? isDarkMode
+                        ? "bg-gray-600 text-white hover:bg-gray-500 focus:ring-gray-400"
+                        : "bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400"
+                      : isDarkMode
+                        ? "bg-blue-600 text-white hover:bg-blue-500 focus:ring-blue-400"
+                        : "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-400"
                     }`}
-                >
-                  {project?.flag ? <Github size={16} /> : <ExternalLink size={16} />}
-                  {project?.flag ? "View on GitHub" : "View Project"}
-                </a>
-              )}
+                  >
+                    {project?.flag ? <Github size={18} /> : <ExternalLink size={18} />}
+                    {project?.flag ? "GitHub" : "Live Demo"}
+                  </a>
+                )}
+              </div>
             </motion.article>
           ))}
         </div>
@@ -397,12 +437,12 @@ export default Projects;
 //         isDarkMode ? "bg-gray-800" : "bg-white"
 //       }`}
 //     >
-//       <div className="max-w-6xl mx-auto px-4">
-//         <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+//       <div className="max-w-6xl px-4 mx-auto">
+//         <h2 className="mb-16 text-4xl font-bold text-center text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
 //           Featured Projects
 //         </h2>
 
-//         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+//         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 //           {projects.map((project, index) => (
 //             <div
 //               key={index}
@@ -413,7 +453,7 @@ export default Projects;
 //               }`}
 //             >
 //               {/* Title + Status */}
-//               <div className="flex justify-between items-start mb-4">
+//               <div className="flex items-start justify-between mb-4">
 //                 <h3
 //                   className={`text-xl font-bold ${
 //                     isDarkMode ? "text-white" : "text-gray-800"
@@ -466,7 +506,7 @@ export default Projects;
 //                         isDarkMode ? "text-gray-300" : "text-gray-600"
 //                       }`}
 //                     >
-//                       <div className="w-1 h-1 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+//                       <div className="flex-shrink-0 w-1 h-1 mt-2 bg-blue-600 rounded-full"></div>
 //                       {feature}
 //                     </li>
 //                   ))}
