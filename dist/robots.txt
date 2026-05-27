@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nagendra1311.netlify.app/sitemap.xml
+
+# Crawl-delay to prevent overloading
+Crawl-delay: 1
+
+# Disallow none - let all bots crawl
+Disallow:
