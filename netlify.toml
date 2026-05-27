@@ -5,20 +5,6 @@
   functions = "netlify/functions"
   publish = "dist"
 
-# Enable prerendering for SEO - makes React SPA crawlable by Google & recruiters
-[[plugins]]
-  package = "@netlify/plugin-prerender"
-
-[plugins.inputs]
-  # List of routes to prerender
-  paths = [
-    "/",
-    "/projects",
-    "/skills",
-    "/about",
-    "/contact"
-  ]
-
 # Cache headers for performance
 [[headers]]
   for = "/index.html"
