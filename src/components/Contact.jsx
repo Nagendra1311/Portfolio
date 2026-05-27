@@ -143,7 +143,7 @@ const Contact = ({ isDarkMode }) => {
 
           {/* Footer Note */}
           <motion.p className={isDarkMode ? "text-gray-500" : "text-gray-500"} variants={cardVariants}>
-            © 2024 Nagendra Gupta. Crafted with passion and precision.
+            © 2026 Nagendra Gupta. Crafted with passion and precision.
           </motion.p>
         </motion.div>
       </div>

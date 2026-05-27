@@ -9,24 +9,46 @@ const Experience = ({ isDarkMode }) => {
       role: "Backend Engineer",
       location: "Noida, Uttar Pradesh",
       duration: "Jun 2024 - Present",
+      // achievements: [
+      //   "Developed and integrated three interconnected platforms: batuk.gold, partner.batuk.gold, and admin.batuk.in, providing a seamless experience for users, partners, and admins.",
+      //   "Built backend architecture for batuk.gold and partner.batuk.gold, handling gold/silver investments, recurring payment (SIP), jewelry purchases, and coin redemption with a multi-level commission structure (Partner → Employee → MFD → Investor).",
+      //   "Implemented Role-Based Access Control (RBAC) for secure, role-specific access to platform features, ensuring data security and compliance.",
+      //   "Implemented secure API request/response encryption to safeguard sensitive transaction data and ensure high security.",
+      //   "Created a custom deep link system to tag investors with their respective Partner/MFD, enabling personalized, trackable user journeys and enhancing referral tracking."
+      // ]
       achievements: [
-        "Developed and integrated three interconnected platforms: batuk.gold, partner.batuk.gold, and admin.batuk.in, providing a seamless experience for users, partners, and admins.",
-        "Built backend architecture for batuk.gold and partner.batuk.gold, handling gold/silver investments, recurring payment (SIP), jewelry purchases, and coin redemption with a multi-level commission structure (Partner → Employee → MFD → Investor).",
-        "Implemented Role-Based Access Control (RBAC) for secure, role-specific access to platform features, ensuring data security and compliance.",
-        "Implemented secure API request/response encryption to safeguard sensitive transaction data and ensure high security.",
-        "Created a custom deep link system to tag investors with their respective Partner/MFD, enabling personalized, trackable user journeys and enhancing referral tracking."
-      ]
+  "Architected and developed 3 interconnected production platforms — batuk.gold, partner.batuk.gold, and admin.batuk.in — supporting 30,000+ users across gold/silver investment, SIP, jewellery purchases, and coin redemptions.",
+  
+  "Built end-to-end backend systems using Node.js and Express.js, processing high-value financial transactions with 99.9% uptime and secure Cashfree webhook integrations.",
+  
+  "Implemented Role-Based Access Control (RBAC) across a 4-level hierarchy (Partner → Employee → MFD → Investor), eliminating unauthorized access incidents.",
+  
+  "Engineered full API request/response encryption for sensitive transaction data, strengthening platform security and compliance.",
+  
+  "Integrated Firebase Push Notifications for real-time transaction updates, improving user engagement by approximately 25%.",
+  
+  "Designed a custom deep-link system to tag investors with their MFD/Partner, enabling personalized user journeys and improving referral tracking accuracy by 40%.",
+  
+  "Integrated live metal price APIs and third-party catalog APIs to provide real-time gold and silver rate updates across platforms."
+]
     },
     {
       company: "Ducat IT Training",
       role: "MERN Stack Developer",
       location: "Noida, Uttar Pradesh",
       duration: "Oct 2023 - Jun 2024",
+      // achievements: [
+      //   "Worked on multiple full-stack projects using the MERN stack, implementing backend APIs, CRUD operations, and secure authentication features with JWT.",
+      //   "Collaborated in an Agile environment with a focus on efficient code delivery through Git version control and Postman for API testing.",
+      //   "Built scalable, performance-optimized solutions with MongoDB, Node.js, and Express.js, improving overall application speed and reliability."
+      // ]
       achievements: [
-        "Worked on multiple full-stack projects using the MERN stack, implementing backend APIs, CRUD operations, and secure authentication features with JWT.",
-        "Collaborated in an Agile environment with a focus on efficient code delivery through Git version control and Postman for API testing.",
-        "Built scalable, performance-optimized solutions with MongoDB, Node.js, and Express.js, improving overall application speed and reliability."
-      ]
+  "Developed 5+ full-stack applications using the MERN stack, implementing RESTful APIs, CRUD operations, and JWT-based secure authentication systems.",
+  
+  "Collaborated in Agile development environments using Git for version control and Postman for API testing, improving development workflow and delivery speed.",
+  
+  "Built performance-optimized backend solutions using MongoDB indexing and Node.js clustering, reducing average API response time by approximately 30%."
+]
     }
   ];
 

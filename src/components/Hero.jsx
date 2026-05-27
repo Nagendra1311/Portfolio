@@ -57,7 +57,7 @@ const Hero = ({ isDarkMode }) => {
 
         {/* Subtext */}
         <motion.p variants={item} className={`text-xl md:text-2xl mb-8 max-w-3xl mx-auto ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-          Full Stack Developer with 1+ years of experience building scalable web
+          Full Stack Developer with 2+ years of experience building scalable web
           applications, integrating secure payment systems, and delivering
           real-time solutions.
         </motion.p>

@@ -45,7 +45,12 @@ const About = ({ isDarkMode }) => {
               Professional Summary
             </h3>
             <p className={`mb-6 leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-              Experienced Backend Engineer with over 1+ year of expertise in designing, developing, and maintaining scalable web applications. Strong in API development, payment gateway integrations, and real-time features. Proven track record in implementing Role-Based Access Control (RBAC), optimizing transactional systems, and enhancing security. Skilled in working with MERN stack, Redis, and Firebase to build high-performance, secure solutions.
+              {/* Experienced Backend Engineer with over 1+ year of expertise in designing, developing, and maintaining scalable web applications. Strong in API development, payment gateway integrations, and real-time features. Proven track record in implementing Role-Based Access Control (RBAC), optimizing transactional systems, and enhancing security. Skilled in working with MERN stack, Redis, and Firebase to build high-performance, secure solutions. */}
+        Results-driven Full Stack Developer with 2+ years of experience building scalable, high-performance web applications
+using the MERN stack (MongoDB, Express.js, React.js, Node.js). Proven expertise in REST API development, realtime systems with Socket.IO and WebSockets, payment gateway integrations (Razorpay, Cashfree, Stripe), and
+enterprise-grade security (RBAC, JWT, OAuth, API Encryption). Skilled in TypeScript, Docker, Redis, BullMQ, and
+GraphQL. Adept at delivering production-ready platforms in Agile environments with a strong focus on code quality,
+security, and system reliability.
             </p>
             <p className={`mb-6 leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
               Currently working at Bharat Batuk Pvt Ltd, where I've designed and developed backend infrastructure for multiple live platforms handling gold/silver investments, counseling sessions, and complex multi-role commission flows.
