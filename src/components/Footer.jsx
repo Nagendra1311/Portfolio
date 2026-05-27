@@ -19,7 +19,7 @@ const Footer = ({ isDarkMode }) => {
           </div>
           
           <div className="footer-section">
-            <h4 className="font-semibold mb-3">Quick Links</h4>
+            <h4 className="mb-3 font-semibold">Quick Links</h4>
             <ul className="space-y-2">
               <li><a href="#home" className={`transition-colors ${isDarkMode ? "text-gray-300 hover:text-blue-400" : "text-gray-600 hover:text-blue-600"}`}>Home</a></li>
               <li><a href="#about" className={`transition-colors ${isDarkMode ? "text-gray-300 hover:text-blue-400" : "text-gray-600 hover:text-blue-600"}`}>About</a></li>
@@ -30,7 +30,7 @@ const Footer = ({ isDarkMode }) => {
           </div>
           
           <div className="footer-section">
-            <h4 className="font-semibold mb-3">Connect</h4>
+            <h4 className="mb-3 font-semibold">Connect</h4>
             <div className="space-y-2">
               <a href="#" className={`block transition-colors ${isDarkMode ? "text-gray-300 hover:text-blue-400" : "text-gray-600 hover:text-blue-600"}`}>LinkedIn</a>
               <a href="#" className={`block transition-colors ${isDarkMode ? "text-gray-300 hover:text-blue-400" : "text-gray-600 hover:text-blue-600"}`}>GitHub</a>
