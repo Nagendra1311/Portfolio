@@ -45,6 +45,23 @@ const Projects = ({ isDarkMode }) => {
       link: "https://partner.batuk.gold",
       thumbnail: "/assets/projects/partner.png",
     },
+     {
+      title: "Bajaj Capital Platform",
+      status: "Live",
+      description:
+        "White-label gold and silver investment platform for Bajaj Capital as a Batuk partner, featuring buy/sell, SIP, coin redemption, and jewelry purchases with Bajaj branding.",
+      impact: "Enterprise partnership platform processing high-value transactions with secure payment integration",
+      features: [
+        "White-label implementation of Batuk's investment platform for Bajaj Capital",
+        "Purchases, recurring payments (SIP), and coin/jewelry redemption",
+        "Live metal prices & catalogs via third-party API integration",
+        "Cashfree Webhooks for secure payments and transaction handling",
+        "Enterprise-grade logging, error handling, and audit trails",
+      ],
+      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Cashfree", "Firebase"],
+      link: "https://digigoldsilver.bajajcapital.com/",
+      thumbnail: "/assets/projects/bajajcapital.png",
+    },
     {
       title: "DreamDor.com Platform",
       status: "Live",
@@ -131,12 +148,12 @@ const Projects = ({ isDarkMode }) => {
       className={`py-20 transition-colors duration-300 ${isDarkMode ? "bg-gray-800" : "bg-white"
         }`}
     >
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      <div className="max-w-6xl px-4 mx-auto">
+        <h2 className="mb-16 text-4xl font-bold text-center text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
           Featured Projects
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
@@ -151,7 +168,7 @@ const Projects = ({ isDarkMode }) => {
               variants={cardVariants}
             >
               {/* Title + Status */}
-              <div className="flex justify-between items-start mb-4">
+              <div className="flex items-start justify-between mb-4">
                 <h3
                   className={`text-xl font-bold ${isDarkMode ? "text-white" : "text-gray-800"
                     }`}
@@ -183,7 +200,7 @@ const Projects = ({ isDarkMode }) => {
                     src={project.thumbnail}
                     alt={`${project.title} screenshot`}
                     loading="lazy"
-                    className="w-full h-40 object-cover rounded-sm mb-4"
+                    className="object-cover w-full h-40 mb-4 rounded-sm"
                   />
                 </div>
               ) : null}
@@ -211,7 +228,7 @@ const Projects = ({ isDarkMode }) => {
                       className={`text-sm flex items-start gap-2 ${isDarkMode ? "text-gray-300" : "text-gray-600"
                         }`}
                     >
-                      <div className="w-1 h-1 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="flex-shrink-0 w-1 h-1 mt-2 bg-blue-600 rounded-full"></div>
                       {feature}
                     </li>
                   ))}
@@ -220,7 +237,7 @@ const Projects = ({ isDarkMode }) => {
 
               {/* Tech Stack */}
               <div className="mb-4">
-                <ul className="flex flex-wrap gap-2 list-none p-0 m-0" aria-label={`${project.title} technologies`}> 
+                <ul className="flex flex-wrap gap-2 p-0 m-0 list-none" aria-label={`${project.title} technologies`}> 
                   {project.tech.slice(0, 3).map((tech, i) => (
                     <li key={i}>
                       <span
@@ -397,12 +414,12 @@ export default Projects;
 //         isDarkMode ? "bg-gray-800" : "bg-white"
 //       }`}
 //     >
-//       <div className="max-w-6xl mx-auto px-4">
-//         <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+//       <div className="max-w-6xl px-4 mx-auto">
+//         <h2 className="mb-16 text-4xl font-bold text-center text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">
 //           Featured Projects
 //         </h2>
 
-//         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+//         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 //           {projects.map((project, index) => (
 //             <div
 //               key={index}
@@ -413,7 +430,7 @@ export default Projects;
 //               }`}
 //             >
 //               {/* Title + Status */}
-//               <div className="flex justify-between items-start mb-4">
+//               <div className="flex items-start justify-between mb-4">
 //                 <h3
 //                   className={`text-xl font-bold ${
 //                     isDarkMode ? "text-white" : "text-gray-800"
@@ -466,7 +483,7 @@ export default Projects;
 //                         isDarkMode ? "text-gray-300" : "text-gray-600"
 //                       }`}
 //                     >
-//                       <div className="w-1 h-1 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+//                       <div className="flex-shrink-0 w-1 h-1 mt-2 bg-blue-600 rounded-full"></div>
 //                       {feature}
 //                     </li>
 //                   ))}
