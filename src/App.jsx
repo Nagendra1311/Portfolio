@@ -36,7 +36,7 @@ function App() {
         <Education isDarkMode={isDarkMode} />
         <Contact isDarkMode={isDarkMode} />
       </main>
-      {/* <Footer isDarkMode={isDarkMode} /> */}
+      {/* <Footer /> */}
     </div>
   )
 }
